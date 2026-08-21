@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: lavalink
+    runtime: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /version
+    envVars:
+      - key: LAVALINK_PASSWORD
+        sync: false
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false
